@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>오시는길</title>
+  <link href="./css/basic.css" rel="stylesheet"/>
+  <style>
+    /*상단 라인*/
+    .top_line{
+      width: 1200px;
+      height: 25px;
+      background-color: #ffd863;      
+    }
+    /*상단 부분*/
+    .top_content{
+      width: 1200px;
+      height: 100px;
+      position: relative;
+    }
+    /* 로고 타이틀*/
+    .logo{
+      width: 400px;
+      height: 100px;
+      left: 140px;
+      top: 10px;
+      position: absolute;
+       /*background-color: aliceblue;  지울부분 */
+    }
+    /*.logo>a{
+      display: inline-block;     
+    }*/
+    /*로고사진*/
+    .logo img{
+      float: left;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      margin-right: 10px;
+    }
+    /*타이틀*/
+    .logo h1{
+      display: inline-block;
+      width: 210px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 2.4rem;
+      color: #ffd863;  
+    }
+    /* practice room */
+    .logo h5{
+      display: inline-block;
+      width: 170px;
+      height: 10px;
+      line-height: 10px;
+      margin-left: 35px;
+      font-size: 1.1rem;
+      color: #7081cc;
+    }
+    /* 로그인 회원가입*/
+    .top_nav{
+      top: 10px;
+      right: 60px;
+      position: absolute;
+    }
+    .top_nav>a{
+      display: inline-block;
+      padding: 0px 5px;
+      font-weight: 500;
+    }
+    .top_nav a:hover{
+      color:  #7081cc;
+      background-color: #ffd863;
+      border-radius: 3px;
+    }
+
+    /*메인메뉴*/
+    .main_menu{
+      left: 450px; /* 수정할 부분*/
+      bottom: 10px;
+      position: absolute;
+      width: 600px;
+      text-align: center;
+      /*background-color: antiquewhite; 지울부분*/
+    }
+    .main_menu li{
+      display: inline-block;
+    }
+    .main_menu li>a{
+      display: inline-block;
+      padding: 10px;
+    }
+    .main_menu li>a:hover{
+      color: #7081cc;
+    }
+
+    /* 오시는길  */
+    .lo_text{
+      height: 120px;
+      background-color: #fce08d;
+    }
+    .lo_text>h1{
+      padding-top: 35px;
+      text-align: center;
+    }
+
+    /*location*/
+    .location_text{
+      width: 500px;
+      text-align: center;
+      font-size: 0.8rem;
+      margin: 30px 350px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid gray;
+    }
+    .location_text>h1{
+      font-weight: 500px;
+      margin-bottom: 10px; 
+    }
+    
+
+    /*지도*/
+    .location{
+      width: 700px;
+      height: 450px;
+      margin: auto;
+    }
+
+    /*길안내*/
+    .way{
+     margin: 20px 280px;
+     width:  700px;
+      height: 300px;
+      border: 3px solid #6d82e4;
+      border-style: double;
+      margin-left: 250px;
+      margin-bottom: 50px;
+    }
+  
+    .way>p{
+      list-style: inside;
+      font-size: 1rem;
+      font-weight: 700; 
+      padding: 30px 20px;
+      letter-spacing: 1px;
+      line-height: 40px;
+    }
+
+
+
+
+
+
+
+    /*footer*/
+    footer{
+      width: 1200px;
+      height: 100px;
+      background-color: #7081cc;
+    }
+    .footer_text{
+      color: white;
+      text-align: center;
+      padding-top: 25px ;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    
+  </style>
+
+</head>
+<body>
+  <!--상단  라인-->
+  <div class="top_line">
+  </div>
+  <!--상단 부분-->
+  <div class="top_content">
+    <!--로고-->
+    <div class="logo">
+      <a href="index.html"><img src="./images/small_logo.png"></a>
+      <a href="index.html"><h1>wavestudio</h1></a><br/>
+      <a href="index.html"><h5>music practiceroom</h5></a>
+    </div>
+    <!--상단 로그인 회원가입-->
+  <div class="top_nav">
+    <a href="login.html" targer="blank">로그인</a>
+    <a href="join.html" targer="blank">회원가입</a>
+  </div>
+  <!--메인메뉴-->
+  <div class="main_menu">
+    <ul>
+      <li><a href="intro.html">음악연습실</a></li>
+      <li><a href="info.html">이용안내</a></li>
+      <li><a href="room.html">연습실</a></li>
+      <li><a href="reservation.html">예약하기</a></li>
+      <li><a href="notice.html">공지사항</a></li>
+      <li><a href="location.html">오시는길</a></li>
+    </ul>
+  </div>
+  </div>
+
+  <!-- 오시는길-->
+  <div class="lo_text">
+  <h1>오시는길</h1>
+  </div>  
+
+  <!--location-->
+  <div class="location_text">
+    <h1>LOCATION</h1>
+    <h2>서울 광진구 뚝섬로 23가길 17 지하 1층</h2>
+  </div>
+
+
+  <!--지도-->
+  <div class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.724561214242!2d127.0609042318917!3d37.537989668930415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca4ec4037cc2f%3A0x444fa003e05d76d6!2z7ISc7Jq47Yq567OE7IucIOq0keynhOq1rCDrmp3shKzroZwyM-qwgOq4uCAxNw!5e0!3m2!1sko!2skr!4v1667371979881!5m2!1sko!2skr" width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <!--길안내-->
+  <div class="way">
+    <p>
+      건대입구역 6번출구 도보 5분거리에 위치해 있으며, <br/>
+      1층에 편의점, 근처에 자양 4동 공영 주차장도 있어 교통이 편리합니다.
+    </p>
+      
+  
+  </div>
+
+
+
+
+  <!--footer 부분-->
+  <footer>  
+    <div class="footer_text">  
+    <p>WAVESTUDIO |  
+    서울 광진구 뚝섬로23가길 17 지하1층 | 
+    이메일 : aaa@naver.com<br/>
+    사업자등록번호 : 000-00-0000 | 
+    TEL : 010-0000-0000 | 
+    대표자 : ㄱㄱㄱ<br/>
+    Copyright&copy;jk.All Rights Reserved</p>
+  </div> 
+  </footer>
+</body>
+</html>

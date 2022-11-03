@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>연습실</title>
+  <link href="./css/basic.css" rel="stylesheet"/>
+  <style>
+    /*상단 라인*/
+    .top_line{
+      width: 1200px;
+      height: 25px;
+      background-color: #ffd863;      
+    }
+    /*상단 부분*/
+    .top_content{
+      width: 1200px;
+      height: 100px;
+      position: relative;
+    }
+    /* 로고 타이틀*/
+    .logo{
+      width: 400px;
+      height: 100px;
+      left: 140px;
+      top: 10px;
+      position: absolute;
+       /*background-color: aliceblue;  지울부분 */
+    }
+    /*.logo>a{
+      display: inline-block;     
+    }*/
+    /*로고사진*/
+    .logo img{
+      float: left;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      margin-right: 10px;
+    }
+    /*타이틀*/
+    .logo h1{
+      display: inline-block;
+      width: 210px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 2.4rem;
+      color: #ffd863;  
+    }
+    /* practice room */
+    .logo h5{
+      display: inline-block;
+      width: 170px;
+      height: 10px;
+      line-height: 10px;
+      margin-left: 35px;
+      font-size: 1.1rem;
+      color: #7081cc;
+    }
+    /* 로그인 회원가입*/
+    .top_nav{
+      top: 10px;
+      right: 60px;
+      position: absolute;
+    }
+    .top_nav>a{
+      display: inline-block;
+      padding: 0px 5px;
+      font-weight: 500;
+    }
+    .top_nav a:hover{
+      color:  #7081cc;
+      background-color: #ffd863;
+      border-radius: 3px;
+    }
+
+    /*메인메뉴*/
+    .main_menu{
+      left: 450px; /* 수정할 부분*/
+      bottom: 10px;
+      position: absolute;
+      width: 600px;
+      text-align: center;
+      /*background-color: antiquewhite; 지울부분*/
+    }
+    .main_menu li{
+      display: inline-block;
+    }
+    .main_menu li>a{
+      display: inline-block;
+      padding: 10px;
+    }
+    .main_menu li>a:hover{
+      color: #7081cc;
+    }
+
+    /* 연습실 메뉴*/
+    .room_text{
+      height: 120px;
+      background-color: #fce08d;
+    }
+    .room_text>h1{
+      padding-top: 40px;
+      text-align: center;
+    }
+
+    /* wavestudio*/
+    .wave_text{
+      width: 200px;
+      text-align: center;
+      font-weight: 500px;
+      font-size: 0.8rem;
+      margin: 30px 510px;
+      padding-bottom: 10px;
+    }
+
+    /* studio*/
+    .studio{
+      width: 1200px;
+      height: 400px;
+      
+    }
+
+  /* 크기설정 */
+    .container{
+      width: 450px;
+      height: 330px;
+      top:10px;
+      margin-left: 100px;
+      border: 1px solid black;
+      /*position: relative;*/
+      float: left;
+      
+    }
+    /* 배너 이미지 마스크 영역 잡기 및 배너 영역만 보이기 */
+    .studio_image{
+      position: absolute;
+      overflow: hidden;
+      width: 450px;
+      height: 330px;
+    }
+    .studio_image li{
+      position: absolute;
+      top:0px;
+      left:200px;
+    }
+    .studio_image>li img{
+      width: 450px;
+      height: 330px;
+    }
+    /* 글자 버튼 모양 및 위치 설정 */
+    .label_btn1{
+      float: left;
+      position: relative;
+      left:10px;
+      top:150px;
+      width: 35px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      /*background-color: rgba(248, 245, 241, 0.966);*/
+      margin-left: 5px;
+      cursor:pointer;
+      color: #ffd863;
+      font-weight: 800;
+      /*레이블 버튼 가장 위로 올리기 */
+      z-index: 1000;
+    }
+    .label_btn2{
+      float: left;
+      position: relative;
+      left:350px;
+      top:150px;
+      width: 35px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      /*background-color: rgba(248, 245, 241, 0.966);*/
+      margin-left: 5px;
+      cursor:pointer;
+      color: #ffd863;
+      font-weight: 800;
+      /*레이블 버튼 가장 위로 올리기 */
+      z-index: 1000;
+    }
+    .container .main_input1:checked ~ label.label_btn1,
+    .container .main_input2:checked ~ label.label_btn2{
+        color: #ffd863;
+    } 
+  
+    /*라디오 버튼 숨기기*/
+    .container input{
+        display: none;
+    }
+    /* 선택된 버튼에 해당하는 이미지 나타내기 */
+    .container .main_input1:checked ~ .studio_image li:nth-child(1),
+    .container .main_input2:checked ~ .studio_image li:nth-child(2),
+    .container .main_input2:checked ~ .studio_image li:nth-child(3),
+    .container .main_input2:checked ~ .studio_image li:nth-child(4),
+    .container .main_input2:checked ~ .studio_image li:nth-child(5),
+    .container .main_input2:checked ~ .studio_image li:nth-child(6),
+    .container .main_input2:checked ~ .studio_image li:nth-child(7),
+    .container .main_input2:checked ~ .studio_image li:nth-child(8),
+    .container .main_input2:checked ~ .studio_image li:nth-child(9){
+       animation: none; /* 밖으로 보내기 */
+        transition: left 0.5s ease-in-out;
+
+       left: 0px;
+        z-index: 10;
+    }
+    .container .main_input1:checked ~ .studio_image li{
+       animation: slideOUt 0.5s ease-in-out none;
+    }
+
+    @keyframes slideOut{
+        0%{left : 0px;}
+        100%{left: -300px;}
+    }  
+
+
+    /* 연습실 설명*/
+    .room_exp{
+      float: right;
+      width: 450px;
+      height: 260px;
+      border: 1px solid #e4e7f7;
+      border-radius: 20px;
+      text-align: center;
+      padding-left: 10px;
+      padding-top: 70px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      margin-right: 100px;
+      background-color: #e4e7f7;
+      color: #574307;
+    }
+    .room_exp>p{
+      line-height: 30px;
+    }
+
+    /* room1,2*/
+    .room1_2{
+      width: 1200px;
+      height: 400px;
+      position: absolute;
+    
+    }
+    
+    .room_image{
+      overflow: hidden;
+      width: 360px;
+      height: 270px;
+      position: left;
+      margin-left: 150px;
+   
+    }
+    .container_room2{
+      position: right;
+      
+    }
+    .room_image2{
+      overflow: hidden;
+      width: 360px;
+      height: 270px;
+      margin-left: 150px;
+    }
+    /*footer*/
+    footer{
+      width: 1200px;
+      height: 100px;
+      background-color: #7081cc;
+    }
+    .footer_text{
+      color: white;
+      text-align: center;
+      padding-top: 25px ;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    
+  </style>
+
+</head>
+<body>
+  <!--상단  라인-->
+  <div class="top_line">
+  </div>
+  <!--상단 부분-->
+  <div class="top_content">
+    <!--로고-->
+    <div class="logo">
+      <a href="index.html"><img src="./images/small_logo.png"></a>
+      <a href="index.html"><h1>wavestudio</h1></a><br/>
+      <a href="index.html"><h5>music practiceroom</h5></a>
+    </div>
+    <!--상단 로그인 회원가입-->
+  <div class="top_nav">
+    <a href="login.html" targer="blank">로그인</a>
+    <a href="join.html" targer="blank">회원가입</a>
+  </div>
+  <!--메인메뉴-->
+  <div class="main_menu">
+    <ul>
+      <li><a href="intro.html">음악연습실</a></li>
+      <li><a href="info.html">이용안내</a></li>
+      <li><a href="room.html">연습실</a></li>
+      <li><a href="reservation.html">예약하기</a></li>
+      <li><a href="notice.html">공지사항</a></li>
+      <li><a href="location.html">오시는길</a></li>
+    </ul>
+  </div>
+  </div>
+
+  <!-- 연습실메뉴-->
+  <div class="room_text">
+  <h1>연 습 실</h1>
+  </div>  
+
+  <!--wavestudio-->
+  <div class="wave_text">
+    <h1>WAVESTUDIO</h1>
+  </div>
+
+  <!-- 연습실 이미지 -->
+  <div class="studio">
+  <section class="container">  <!-- 버튼 -->
+    <input type="radio" class="main_input1" name="mainradio" id="select1" checked>
+    <label for="select1" class="label_btn1">PREV</label>
+    <input type="radio" class="main_input2" name="mainradio" id="select2">
+    <label for="select2" class="label_btn2">NEXT</label>
+
+    <ul class="studio_image"> <!-- 스튜디오이미지 -->
+        <li><img src="./images/studio_8.png" alt=""></a></li>
+        <li><img src="./images/studio_7.png" alt=""></a></li>
+        <li><img src="./images/studio_1.png" alt=""></a></li>
+        <li><img src="./images/studio_2.png" alt=""></a></li>
+        <li><img src="./images/studio_3.png" alt=""></a></li>
+        <li><img src="./images/studio_4.png" alt=""></a></li>
+        <li><img src="./images/studio_5.png" alt=""></a></li>
+        <li><img src="./images/studio_6.png" alt=""></a></li>
+        <li><img src="./images/ground_plan.jpg" alt=""></a></li>
+    </ul>
+  </section> 
+  
+    <div class="room_exp">
+      <p>
+        - 웨이브스튜디오 -<br/>
+        kt 기가아이즈 cctv, 아이패스 지문인식으로 보안 및 핸드폰<br/>
+        어플을 이용한 방문자 확인 및 문 개폐가 가능합니다.<br/>
+        각 방에도 문마다 도어락이 설치되어 있고<br/>
+        냉온풍기와 랜선을 꽂을 수 있는 포트와 와이파이가 제공됩니다.<br/>
+      </p>
+    </div>
+  </div>
+
+  <div class="room1_2">
+    <section class="container_room1">  <!-- 버튼 -->
+      <input type="radio" class="room_input1" name="roomradio" id="room_select1" checked>
+      <label for="room_select1" class="room_btn1">PREV</label>
+      <input type="radio" class="room_input2" name="roomradio" id="room_select2" checked>
+      <label for="room_select2" class="room_btn2">NEXT</label>
+     
+      <ul class="room_image"> <!-- room1이미지 -->
+        <li><img src="./images/iloveimg-resized/room_1_2.jpg" alt=""></a></li>
+        <li><img src="./images/iloveimg-resized/room_1.jpg" alt=""></a></li>
+      </ul>
+    </section> 
+
+    <section class="container_room2">
+      <input type="radio" class="slide2" name="slide2" id="slide01" checked>
+      <input type="radio" class="slide2" name="slide2" id="slide02">
+      <input type="radio" class="slide2" name="slide2" id="slide03">
+      <input type="radio" class="slide2" name="slide2" id="slide04">
+      
+      
+      <ul class="room_image2"> <!-- room2이미지 -->
+        <li>
+          <a>
+            <label for="slide04" class="prev">PREV</label>
+            <img src="./images/iloveimg-resized/room_2.jpg">
+            <label for="slide02" class="next">NEXT</label>
+          </a>
+        </li>
+        <li>
+          <a>
+            <label for="slide01" class="prev">PREV</label>
+            <img src="./images/iloveimg-resized/room_2_2.jpg">
+            <label for="slide03" class="next">NEXT</label>
+          </a>
+        </li>
+        <li>
+          <a>
+            <label for="slide02" class="prev">PREV</label>
+            <img src="./images/iloveimg-resized/room_2_3.jpg">
+            <label for="slide04" class="next">NEXT</label>
+          </a>
+        </li>
+        <li>
+          <a>
+            <label for="slide03" class="prev">PREV</label>
+            <img src="./images/iloveimg-resized/room_2_4.jpg">
+            <label for="slide01" class="next">NEXT</label>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="room345">
+    <section class="container_room3">  <!-- 버튼 -->
+      <input type="radio" class="room_input1" name="roomradio" id="room_select1" checked>
+      <label for="room_select1" class="room_btn1">PREV</label>
+      <input type="radio" class="room_input2" name="roomradio" id="room_select2" checked>
+      <label for="room_select2" class="room_btn2">NEXT</label>
+     
+      <ul class="room_image3"> <!-- room3이미지 -->
+        <li><img src="./images/iloveimg-resized/room_3.jpg" alt=""></a></li>
+        <li><img src="./images/iloveimg-resized/room_3_2.jpg" alt=""></a></li>
+      </ul>
+    </section> 
+    <section class="container_room4">
+      <input type="radio" class="main_input1" name="mainradio" id="select1" checked>
+      <label for="select1" class="label_btn1">PREV</label>
+      <input type="radio" class="main_input2" name="mainradio" id="select2">
+      <label for="select2" class="label_btn2">NEXT</label>
+      
+      <ul class="studio_image4"> <!-- room4이미지 -->
+        <li><img src="./images/iloveimg-resized/room_4.jpg" alt=""></a></li>
+        <li><img src="./images/iloveimg-resized/room_4_2.jpg" alt=""></a></li>
+      </ul>
+    </section>
+
+    <section class="container_room5">
+      <input type="radio" class="main_input1" name="mainradio" id="select1" checked>
+      <label for="select1" class="label_btn1">PREV</label>
+      <input type="radio" class="main_input2" name="mainradio" id="select2">
+      <label for="select2" class="label_btn2">NEXT</label>
+      
+      <ul class="studio_image5"> <!-- room5이미지 -->
+        <li><img src="./images/iloveimg-resized/room_5.jpg" alt=""></a></li>
+        <li><img src="./images/iloveimg-resized/room_5_2.jpg" alt=""></a></li>
+      </ul>
+    </section>
+  </div>
+
+
+
+
+
+
+
+   <!--footer 부분-->
+   <footer>  
+    <div class="footer_text">  
+    <p>WAVESTUDIO |  
+    서울 광진구 뚝섬로23가길 17 지하1층 | 
+    이메일 : aaa@naver.com<br/>
+    사업자등록번호 : 000-00-0000 | 
+    TEL : 010-0000-0000 | 
+    대표자 : ㄱㄱㄱ<br/>
+    Copyright&copy;jk.All Rights Reserved</p>
+  </div> 
+  </footer>
+</body>
+</html>

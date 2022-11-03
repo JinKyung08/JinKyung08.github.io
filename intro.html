@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>WaveStudio음악연습실</title>
+  <link href="./css/basic.css" rel="stylesheet"/>
+  <style>
+    /*상단 라인*/
+    .top_line{
+      width: 1200px;
+      height: 25px;
+      background-color: #ffd863;      
+    }
+    /*상단 부분*/
+    .top_content{
+      width: 1200px;
+      height: 100px;
+      position: relative;
+    }
+    /* 로고 타이틀*/
+    .logo{
+      width: 400px;
+      height: 100px;
+      left: 140px;
+      top: 10px;
+      position: absolute;
+       /*background-color: aliceblue;  지울부분 */
+    }
+    /*.logo>a{
+      display: inline-block;     
+    }*/
+    /*로고사진*/
+    .logo img{
+      float: left;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      margin-right: 10px;
+    }
+    /*타이틀*/
+    .logo h1{
+      display: inline-block;
+      width: 210px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 2.4rem;
+      color: #ffd863;  
+    }
+    /* practice room */
+    .logo h5{
+      display: inline-block;
+      width: 170px;
+      height: 10px;
+      line-height: 10px;
+      margin-left: 35px;
+      font-size: 1.1rem;
+      color: #7081cc;
+    }
+    /* 로그인 회원가입*/
+    .top_nav{
+      top: 10px;
+      right: 60px;
+      position: absolute;
+    }
+    .top_nav>a{
+      display: inline-block;
+      padding: 0px 5px;
+      font-weight: 500;
+    }
+    .top_nav a:hover{
+      color:  #7081cc;
+      background-color: #ffd863;
+      border-radius: 3px;
+    }
+
+    /*메인메뉴*/
+    .main_menu{
+      left: 450px; /* 수정할 부분*/
+      bottom: 10px;
+      position: absolute;
+      width: 600px;
+      text-align: center;
+      /*background-color: antiquewhite; 지울부분*/
+    }
+    .main_menu li{
+      display: inline-block;
+    }
+    .main_menu li>a{
+      display: inline-block;
+      padding: 10px;
+    }
+    .main_menu li>a:hover{
+      color: #7081cc;
+    }
+
+     /* 회원가입 메뉴*/
+     .intro_text{
+      height: 120px;
+      background-color: #fce08d;
+    }
+    .intro_text>h1{
+      padding-top: 30px;
+      text-align: center;
+    }
+    
+    
+    /* 메인로고 */
+    .main_logo{
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .info{
+      width: 780px;
+      height: 400px;
+      margin: auto;
+      text-align: center;
+      border: 2px solid #ffd863;
+      letter-spacing: 1px;
+      font-weight: 800;
+    }
+
+    .info>p{
+      padding-top: 80px;
+    }
+
+    .intro_image{
+      height: 400px;
+      margin-top: 50px;
+    }
+    .image1{
+      width: 450px;
+      height: 350px;
+      margin-left: 100px;
+      margin-right: 25px;
+    }
+    .image2{
+      width: 450px;
+      height: 350px;
+      margin-left: 25px;
+      margin-right: 100px;
+    }
+
+
+    /*footer*/
+    footer{
+      width: 1200px;
+      height: 100px;
+      background-color: #7081cc;
+    }
+    .footer_text{
+      color: white;
+      text-align: center;
+      padding-top: 25px ;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    
+  </style>
+
+</head>
+<body>
+  <!--상단  라인-->
+  <div class="top_line">
+  </div>
+  <!--상단 부분-->
+  <div class="top_content">
+    <!--로고-->
+    <div class="logo">
+      <a href="index.html"><img src="./images/small_logo.png"></a>
+      <a href="index.html"><h1>wavestudio</h1></a><br/>
+      <a href="index.html"><h5>music practiceroom</h5></a>
+    </div>
+    <!--상단 로그인 회원가입-->
+  <div class="top_nav">
+    <a href="login.html" targer="blank">로그인</a>
+    <a href="join.html" targer="blank">회원가입</a>
+  </div>
+  <!--메인메뉴-->
+  <div class="main_menu">
+    <ul>
+      <li><a href="intro.html">음악연습실</a></li>
+      <li><a href="info.html">이용안내</a></li>
+      <li><a href="room.html">연습실</a></li>
+      <li><a href="reservation.html">예약하기</a></li>
+      <li><a href="notice.html">공지사항</a></li>
+      <li><a href="location.html">오시는길</a></li>
+    </ul>
+  </div>
+  </div>
+
+  <!-- 음악연습실메뉴-->
+  <div class="intro_text">
+  <h1>wavestudio 연습실</h1>
+  </div>  
+
+  <!--로고 사진-->
+  <div class="main_logo">
+    <img src="./images/logo_2.png">
+  </div>
+
+  <!--연습실안내-->
+  <div class="info">
+    <p>웨이브스튜디오 소개<br/><br/>
+       안녕하세요. 건대 웨이브스튜디오입니다.<br/>
+       저희 웨이브 스튜디오는 음악연습실, 유튜브 등 스트리머분들을 위한 방음 공간입니다.<br/>
+       크기가 큰 방들로만 5개로 구성되어 있어 프라이빗하고 쾌적한 공간을 제공해 드립니다.<br/>
+       웨이브 스튜디오를 이용해주시는 모든 분들께 조용하고 깨끗한 시설에서 편히<br/>
+       연습하실 수 있도록 최상의 환경으로 보답하겠습니다.<br/>
+       많은 이용 부탁드립니다.<br/>
+       감사합니다.<br/><br/>
+       -WAVESTUDIO -
+    </p> 
+  </div>
+
+  <div class="intro_image">
+    
+    <img src="./images/intro1.jpg" class="image1">
+    <img src="./images/intro2.jpg" class="image2">
+  </div>
+
+
+
+  <!--footer 부분-->
+  <footer>  
+    <div class="footer_text">  
+    <p>WAVESTUDIO |  
+    서울 광진구 뚝섬로23가길 17 지하1층 | 
+    이메일 : aaa@naver.com<br/>
+    사업자등록번호 : 000-00-0000 | 
+    TEL : 010-0000-0000 | 
+    대표자 : ㄱㄱㄱ<br/>
+    Copyright&copy;jk.All Rights Reserved</p>
+  </div> 
+  </footer>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입</title>
+  <link href="./css/basic.css" rel="stylesheet"/>
+  <style>
+    /*상단 라인*/
+    .top_line{
+      width: 1200px;
+      height: 25px;
+      background-color: #ffd863;
+     
+    }
+    /*상단 부분*/
+    .top_content{
+      width: 1200px;
+      height: 100px;
+      position: relative;
+    }
+    /* 로고 타이틀*/
+    .logo{
+      width: 400px;
+      height: 100px;
+      left: 140px;
+      top: 10px;
+      position: absolute;
+       /*background-color: aliceblue;  지울부분 */
+    }
+    /*.logo>a{
+      display: inline-block;     
+    }*/
+    /*로고사진*/
+    .logo img{
+      float: left;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      margin-right: 10px;
+    }
+    /*타이틀*/
+    .logo h1{
+      display: inline-block;
+      width: 210px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 2.4rem;
+      color: #ffd863;  
+    }
+    /* practice room */
+    .logo h5{
+      display: inline-block;
+      width: 170px;
+      height: 10px;
+      line-height: 10px;
+      margin-left: 35px;
+      font-size: 1.1rem;
+      color: #7081cc;
+    }
+    /* 로그인 회원가입*/
+    .top_nav{
+      top: 10px;
+      right: 60px;
+      position: absolute;
+    }
+    .top_nav>a{
+      display: inline-block;
+      padding: 0px 5px;
+      font-weight: 500;
+    }
+    .top_nav a:hover{
+      color:  #7081cc;
+      background-color: #ffd863;
+      border-radius: 3px;
+    }
+
+    /*메인메뉴*/
+    .main_menu{
+      left: 450px; /* 수정할 부분*/
+      bottom: 10px;
+      position: absolute;
+      width: 600px;
+      text-align: center;
+      /*background-color: antiquewhite; 지울부분*/
+    }
+    .main_menu li{
+      display: inline-block;
+    }
+    .main_menu li>a{
+      display: inline-block;
+      padding: 10px;
+    }
+    .main_menu li>a:hover{
+      color: #7081cc;
+    }
+
+    /* 회원가입 메뉴*/
+    .join_text{
+      height: 120px;
+      background-color: #fce08d;
+    }
+    .join_text>h1{
+      padding-top: 30px;
+      text-align: center;
+    }
+
+    /*회원가입 테이블*/
+    .member_form>h1{
+      margin: 50px 0px;
+      text-align: center;
+    }
+    table,tr,td,th{
+      padding: 0px; margin: 0px;
+    }
+  .member_form{
+    width: 1200px;
+    height: 700px;
+  }
+ 
+  table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-bottom: none;
+    margin-left: 350px;
+    width: 500px;
+
+  }
+  tr{
+    height: 50px;
+    line-height: 50px;
+  }
+  td{
+    border: 0.8px solid rgb(194, 191, 191);
+    
+  }
+  .input_id{
+    width: 190px;
+    height: 26px; 
+    margin-bottom: 5px;
+  }
+  .userid{
+    height: 26px;
+    cursor: pointer;
+  }
+  .title{
+    width: 230px;
+    background-color: #ffefbf;
+    text-align: center;
+  }
+  .content{
+    width: 450px;
+    padding-left: 10px; /* 수정할 부분*/
+  }
+  .input_text{
+    width: 250px;
+    height: 26px; 
+    margin-bottom: 4px;
+  }
+  .p1{
+    width: 70px;
+    height: 26px;
+    line-height: 26px;
+    margin-bottom: 4px;
+  }
+  .p2{
+    width: 70px;
+    height: 26px;
+    line-height: 26px;
+    margin-bottom: 4px;
+  }
+  .a1{
+    width: 250px;
+    height: 26px;
+    line-height: 26px;
+    margin-bottom: 4px;
+  }
+  .submit{
+    text-align: right;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+  #submit, #reset{   
+    width: 70px;
+    height: 26px;
+    background-color: #fce08d;
+    border-radius: 5px;
+    border: 0.8px solid rgb(233, 204, 165);
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+    /*footer*/
+    footer{
+      width: 1200px;
+      height: 100px;
+      background-color: #7081cc;
+    }
+    .footer_text{
+      color: white;
+      text-align: center;
+      padding-top: 25px ;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+  </style>
+
+</head>
+<body>
+  <!--상단  라인-->
+  <div class="top_line">
+  </div>
+  <!--상단 부분-->
+  <div class="top_content">
+    <!--로고-->
+    <div class="logo">
+      <a href="index.html"><img src="./images/small_logo.png"></a>
+      <a href="index.html"><h1>wavestudio</h1></a><br/>
+      <a href="index.html"><h5>music practiceroom</h5></a>
+    </div>
+    <!--상단 로그인 회원가입-->
+  <div class="top_nav">
+    <a href="login.html" targer="blank">로그인</a>
+    <a href="join.html" targer="blank">회원가입</a>
+  </div>
+  <!--메인메뉴-->
+  <div class="main_menu">
+    <ul>
+      <li><a href="intro.html">음악연습실</a></li>
+      <li><a href="info.html">이용안내</a></li>
+      <li><a href="room.html">연습실</a></li>
+      <li><a href="reservation.html">예약하기</a></li>
+      <li><a href="notice.html">공지사항</a></li>
+      <li><a href="location.html">오시는길</a></li>
+    </ul>
+  </div>
+  </div>
+
+ <!-- 회원가입 메뉴-->
+ <div class="join_text">
+  <h1>회원가입</h1>
+</div>
+
+
+<!-- 회원가입 테이블-->
+<form action="" method="post" name="member" id="member"></form>
+  <div class="member_form">
+    <h1>JOIN</h1>
+  <table border="0">
+    <tr>
+      <td class="title"><label for="user_id">아 이 디</label></td>
+      <td class="content"><input type="text" name="user_id" id="user_id" class="input_id" required>
+      <a href="#"><input type="button" name="user_id" id="user_id" value="중복확인" class="userid"></a></td>
+    </tr>
+    <tr>
+     <td class="title"><label for="pwd">비밀번호</label></td>
+     <td class="content"><input type="password" name="pwd" id="pwd" class="input_text" required placeholder="4자~12자이하 공백제외 특수문자 영문자"></td>
+    </tr>
+    <tr>
+      <td class="title"><label for="pwd">비밀번호확인</label></td>
+      <td class="content"><input type="password" name="pwd" id="pwd" class="input_text" required></td>
+    </tr> 
+    <tr>
+      <td class="title"><label for="name">이 름</label></td>
+      <td class="content"><input type="text" name="name" id="name" class="input_text" required placeholder="이름을 입력하세요"></td>
+    </tr> 
+    <tr>
+      <td class="title"><label for="email">이 메 일</label></td>
+      <td class="content"><input type="email" name="email" id="email" class="input_text" required></td>
+    </tr> 
+    <tr>
+      <td class="title"><label for="phone">전화번호</label></td>
+      <td class="content">
+        <select class="p1">
+          <option>010</option>
+          <option>011</option>
+          <option>017</option>
+          <option>018</option>
+          <option>019</option>
+          <option>070</option>
+        </select>
+        - <input type="text" name="phone2" id="phone2" class="p1">
+        - <input type="text" name="phone3" id="phone3" class="p1">
+      </td>
+    </tr> 
+    <tr>
+      <td class="title">우편번호</td>
+      <td class="content"><input type="button" name="code_btn" id="code_btn" class="btn" value="우편번호">
+         <input type="text" name="code" id="code" class="input_text" readonly class="p2"></td>
+    </tr>
+    <tr>
+      <td class="title"><label for="addr">주 소</label></td>
+      <td class="content"><input type="text" name="addr" id="addr" class="a1" readonly ></td>
+    </tr>
+    <tr>
+      <td class="title"><label for="addr_1">상세주소</label></td>
+      <td class="content"><input type="text" name="addr_1" id="addr_1" class="a1" ></td>
+    </tr>
+    <tr>
+      <td class="submit" colspan="2"><input type="submit" name="submit" id="submit" value="가입">&nbsp;&nbsp;&nbsp;
+        <input type="reset" name="reset" id="reset" value="취소"></td>
+      </tr>
+    </table>
+  </div>
+  <!--footer 부분-->
+  <footer>  
+    <div class="footer_text">  
+    <p>WAVESTUDIO |  
+    서울 광진구 뚝섬로23가길 17 지하1층 | 
+    이메일 : aaa@naver.com<br/>
+    사업자등록번호 : 000-00-0000 | 
+    TEL : 010-0000-0000 | 
+    대표자 : ㄱㄱㄱ<br/>
+    Copyright&copy;jk.All Rights Reserved</p>
+  </div> 
+  </footer>
+
+</body>
+</html>

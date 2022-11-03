@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이용안내</title>
+  <link href="./css/basic.css" rel="stylesheet"/>
+  <style>
+    /*상단 라인*/
+    .top_line{
+      width: 1200px;
+      height: 25px;
+      background-color: #ffd863;      
+    }
+    /*상단 부분*/
+    .top_content{
+      width: 1200px;
+      height: 100px;
+      position: relative;
+    }
+    /* 로고 타이틀*/
+    .logo{
+      width: 400px;
+      height: 100px;
+      left: 140px;
+      top: 10px;
+      position: absolute;
+       /*background-color: aliceblue;  지울부분 */
+    }
+    /*.logo>a{
+      display: inline-block;     
+    }*/
+    /*로고사진*/
+    .logo img{
+      float: left;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      margin-right: 10px;
+    }
+    /*타이틀*/
+    .logo h1{
+      display: inline-block;
+      width: 210px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 2.4rem;
+      color: #ffd863;  
+    }
+    /* practice room */
+    .logo h5{
+      display: inline-block;
+      width: 170px;
+      height: 10px;
+      line-height: 10px;
+      margin-left: 35px;
+      font-size: 1.1rem;
+      color: #7081cc;
+    }
+    /* 로그인 회원가입*/
+    .top_nav{
+      top: 10px;
+      right: 60px;
+      position: absolute;
+    }
+    .top_nav>a{
+      display: inline-block;
+      padding: 0px 5px;
+      font-weight: 500;
+    }
+    .top_nav a:hover{
+      color:  #7081cc;
+      background-color: #ffd863;
+      border-radius: 3px;
+    }
+
+    /*메인메뉴*/
+    .main_menu{
+      left: 450px; /* 수정할 부분*/
+      bottom: 10px;
+      position: absolute;
+      width: 600px;
+      text-align: center;
+      /*background-color: antiquewhite; 지울부분*/
+    }
+    .main_menu li{
+      display: inline-block;
+    }
+    .main_menu li>a{
+      display: inline-block;
+      padding: 10px;
+    }
+    .main_menu li>a:hover{
+      color: #7081cc;
+    }
+
+     /* 이용안내 메뉴*/
+     .info_text{
+      height: 120px;
+      background-color: #fce08d;
+    }
+    .info_text>h1{
+      padding-top: 40px;
+      text-align: center;
+    }
+
+    /*연습실 이용요금*/
+    .price_text{
+      width: 200px;
+      border-bottom: 2px solid gray;
+      text-align: center;
+      font-weight: 500px;
+      font-size: 0.8rem;
+      margin: 30px 510px;
+      padding-bottom: 10px;
+    }
+    /*이용요금 테이블*/
+    table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 900px;
+  }
+  
+  tr{
+    height: 50px;
+    line-height: 50px;
+  }
+  td{
+    width: 155px;
+    border: 0.8px solid black;
+    background-color: #fdf7e5;
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+    .price_tbl{
+      height: 530px;
+      text-align: center;
+      margin: 30px 170px;
+    }
+    .head{
+      height: 60px;
+      line-height: 60px;
+      background-color: #fad570;
+      letter-spacing: 1px;
+      font-size: 1.2rem;
+      
+    }
+    .room{
+      width: 70px;
+      background-color: #fff1c8;
+      padding: 10px;
+    }
+    .room2{
+      height: 27px;
+      line-height: 27px;
+    }
+
+    .note{
+      width: 150px;
+    }
+
+    /* 요금 안내사항 */
+    .price_info{
+      height: 350px;
+      width: 900px;
+      margin: 50px 170px;
+      text-align: left;
+      border: 3px solid #7081cc;
+      border-style: double;
+      
+    }
+    
+    .price_info li{
+      list-style: inside;    
+      padding-left: 50px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding-top: 15px;
+      margin-top: 20px;
+    }
+
+    /*footer*/
+    footer{
+      width: 1200px;
+      height: 100px;
+      background-color: #7081cc;
+    }
+    .footer_text{
+      color: white;
+      text-align: center;
+      padding-top: 25px ;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    
+  </style>
+
+</head>
+<body>
+  <!--상단  라인-->
+  <div class="top_line">
+  </div>
+  <!--상단 부분-->
+  <div class="top_content">
+    <!--로고-->
+    <div class="logo">
+      <a href="index.html"><img src="./images/small_logo.png"></a>
+      <a href="index.html"><h1>wavestudio</h1></a><br/>
+      <a href="index.html"><h5>music practiceroom</h5></a>
+    </div>
+    <!--상단 로그인 회원가입-->
+  <div class="top_nav">
+    <a href="login.html" targer="blank">로그인</a>
+    <a href="join.html" targer="blank">회원가입</a>
+  </div>
+  <!--메인메뉴-->
+  <div class="main_menu">
+    <ul>
+      <li><a href="intro.html">음악연습실</a></li>
+      <li><a href="info.html">이용안내</a></li>
+      <li><a href="room.html">연습실</a></li>
+      <li><a href="reservation.html">예약하기</a></li>
+      <li><a href="notice.html">공지사항</a></li>
+      <li><a href="location.html">오시는길</a></li>
+    </ul>
+  </div>
+  </div>
+
+  <!-- 음악연습실메뉴-->
+  <div class="info_text">
+  <h1>이용안내</h1>
+  </div>  
+
+  <!--연습실 이용요금테이블-->
+  <div class="price_text">
+    <h1>연습실 이용요금</h1>
+  </div>
+
+  <div class="price_tbl">
+    <table border="1">
+      <tr class="head">
+        <th>방</th>
+        <th>시간제</th>
+        <th>쿠폰제(10시간)</th>
+        <th>쿠폰제(20시간)</th>
+        <th>비고</th>
+      </tr>
+      <tr>
+        <td class="room">1번</td>
+        <td>6000</td>
+        <td>50000</td>
+        <td>90000</td>
+        <td class="note">냉난방,와이파이</td>
+      </tr>
+      <tr class="room2">
+        <td class="room">2번</td>
+        <td>8000</td>
+        <td>65000</td>
+        <td>120000</td>
+        <td class="note">냉난방,와이파이,<br/>공간 알파룸</td>
+      </tr>
+      <tr>
+        <td class="room">3번</td>
+        <td>7000</td>
+        <td>60000</td>
+        <td>100000</td>
+        <td class="note">냉난방,와이파이</td>
+      </tr>
+      <tr>
+        <td class="room">4번</td>
+        <td>5000</td>
+        <td>40000</td>
+        <td>80000</td>
+        <td class="note">냉난방,와이파이</td>
+      </tr>
+      <tr>
+        <td class="room">5번</td>
+        <td>6000</td>
+        <td>50000</td>
+        <td>90000</td>
+        <td class="note">냉난방,와이파이</td>
+      </tr>
+    </table>
+  </div>
+  
+  <!--요금 안내사항-->
+  <div class="price_info">
+    <ul>
+      <li>전용대여, 월단위 대여문의</li>
+      <li>쿠폰제(10, 20시간) - 1,2개월 사용기간 제한</li>
+      <li>스피커 필요시 제공(미리 연락주셔야 합니다)</li>
+      <li>시간제 - 5시간이상 이용시 할인 (문의)</li>
+      <li>드럼,관악기는 대여 불가</li>
+    </ul>
+  </div>
+
+
+
+  <!--footer 부분-->
+  <footer>  
+    <div class="footer_text">  
+    <p>WAVESTUDIO |  
+    서울 광진구 뚝섬로23가길 17 지하1층 | 
+    이메일 : aaa@naver.com<br/>
+    사업자등록번호 : 000-00-0000 | 
+    TEL : 010-0000-0000 | 
+    대표자 : ㄱㄱㄱ<br/>
+    Copyright&copy;jk.All Rights Reserved</p>
+  </div> 
+  </footer>
+</body>
+</html>

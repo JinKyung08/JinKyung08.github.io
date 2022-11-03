@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>WaveStudio음악연습실</title>
+  <link href="./css/basic.css" rel="stylesheet"/>
+  <style>
+    /*상단 라인*/
+    .top_line{
+      width: 1200px;
+      height: 25px;
+      background-color: #ffd863;
+
+      
+    }
+    /*상단 부분*/
+    .top_content{
+      width: 1200px;
+      height: 100px;
+      position: relative;
+    }
+    /* 로고 타이틀*/
+    .logo{
+      width: 400px;
+      height: 100px;
+      left: 140px;
+      top: 10px;
+      position: absolute;
+       /*background-color: aliceblue;  지울부분 */
+    }
+    /*.logo>a{
+      display: inline-block;     
+    }*/
+    /*로고사진*/
+    .logo img{
+      float: left;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      margin-right: 10px;
+    }
+    /*타이틀*/
+    .logo h1{
+      display: inline-block;
+      width: 210px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 2.4rem;
+      color: #ffd863;  
+    }
+    /* practice room */
+    .logo h5{
+      display: inline-block;
+      width: 170px;
+      height: 10px;
+      line-height: 10px;
+      margin-left: 35px;
+      font-size: 1.1rem;
+      color: #7081cc;
+    }
+    /* 로그인 회원가입*/
+    .top_nav{
+      top: 10px;
+      right: 60px;
+      position: absolute;
+    }
+    .top_nav>a{
+      display: inline-block;
+      padding: 0px 5px;
+      font-weight: 500;
+    }
+    .top_nav a:hover{
+      color:  #7081cc;
+      background-color: #ffd863;
+      border-radius: 3px;
+    }
+
+    /*메인메뉴*/
+    .main_menu{
+      left: 450px; /* 수정할 부분*/
+      bottom: 10px;
+      position: absolute;
+      width: 600px;
+      text-align: center;
+      /*background-color: antiquewhite; 지울부분*/
+    }
+    .main_menu li{
+      display: inline-block;
+    }
+    .main_menu li>a{
+      display: inline-block;
+      padding: 10px;
+    }
+    .main_menu li>a:hover{
+      color: #7081cc;
+    }
+      /*메인이미지 */
+     /* 배너 컨테이너 크기설정 */
+    .container{
+      position: relative;
+      width: 1200px;
+      height: 400px;
+      margin-bottom: 10px;
+    }
+    /* 배너 이미지 마스크 영역 잡기 및 배너 영역만 보이기 */
+    .main_image{
+      position: absolute;
+      overflow: hidden;
+      width: 1200px;
+      height: 400px;
+    }
+    .main_image li{
+      position: absolute;
+      top:0px;
+      left:200px;
+    }
+
+    /* 글자 버튼 모양 및 위치 설정 */
+    .label_btn1{
+      float: left;
+      position: relative;
+      left:10px;
+      top:200px;
+      width: 35px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      /*background-color: rgba(248, 245, 241, 0.966);*/
+      margin-left: 5px;
+      cursor:pointer;
+      color: #ffd863;
+      font-weight: 800;
+      /*레이블 버튼 가장 위로 올리기 */
+      z-index: 1000;
+    }
+    .label_btn2{
+      float: left;
+      position: relative;
+      left:1100px;
+      top:200px;
+      width: 35px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      /*background-color: rgba(248, 245, 241, 0.966);*/
+      margin-left: 5px;
+      cursor:pointer;
+      color: #ffd863;
+      font-weight: 800;
+      /*레이블 버튼 가장 위로 올리기 */
+      z-index: 1000;
+    }
+    .container .main_input1:checked ~ label.label_btn1,
+    .container .main_input2:checked ~ label.label_btn2{
+      color: #ffd863;
+    } 
+     
+    /*라디오 버튼 숨기기*/
+    .container input{
+      display: none;
+    }
+    /* 선택된 버튼에 해당하는 이미지 나타내기 */
+    .container .main_input1:checked ~ .main_image li:nth-child(1),
+    .container .main_input2:checked ~ .main_image li:nth-child(2){
+
+      animation: none; /* 밖으로 보내기 */
+      transition: left 0.7s ease-in-out;
+
+      left: 0px;
+      z-index: 10;
+    }
+    .container .main_input1:checked ~ .main_image li{
+      animation: slideOUt 0.9s ease-in-out none;
+    }
+
+    @keyframes slideOut{
+        0%{left : 0px;}
+        100%{left: -300px;}
+    }
+
+    /* 연습실 둘러보기*/
+    .room{
+      width: 1200px;
+      height: 400px;
+      margin-bottom: 20px;
+    }
+    .room>h1{
+      padding: 30px 0px;
+      text-align: center;
+      font-weight: 400;
+    }
+    .room_image{
+      width: 1150px;
+      height: 260px;
+      margin: 0px 40px;
+    }
+    .room_image img{
+      width: 340px;
+      height: 260px;
+      padding: 0px 15px;
+      transition: 0.3s;
+    }
+  
+    .room_image img:hover, .room_imagey a:focus img{
+      transform: scale(1.2);
+    }
+    /* 공지사항 오시는길*/
+    .section{
+    width: 1200px;
+    height: 300px;
+    background-color: #ffd863;
+   }
+   /*공지사항 왼쪽부분 */
+    .notice{
+      float: left;
+      width: 390px;
+      height: 220px;
+      margin-left: 220px;
+      margin-top: 25px;
+      text-align: left;
+    }
+    .notice_top{
+      width: 350px;
+      height: 65px;
+      border-bottom: 2px solid rgb(184, 184, 184);
+    }
+    .notice_top>h2{
+      padding-top: 10px;
+      font-weight: 500;
+      padding-left: 10px;
+    }
+    
+    .notice li{
+      margin-top: 5px;
+      list-style: inside;
+      padding-bottom: 1px;
+      letter-spacing: 1px;
+    }
+    .notice_top a{
+      display: inline;
+      float: right;
+    }
+    /* 지도 */
+    .location{
+      float: left;
+      width: 390px;
+      height: 220px;
+      margin-right: 200px;
+      margin-top: 25px;
+      text-align: left;
+    }
+    .location>h2{
+      font-weight: 500;
+      padding-bottom: 2px;
+    }
+    .location>iframe{
+      width: 400px;
+      height: 200px;
+    }
+    /*footer*/
+    footer{
+      width: 1200px;
+      height: 100px;
+      background-color: #7081cc;
+    }
+    .footer_text{
+      color: white;
+      text-align: center;
+      padding-top: 25px ;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    
+  </style>
+
+</head>
+<body>
+  <!--상단  라인-->
+  <div class="top_line">
+  </div>
+  <!--상단 부분-->
+  <div class="top_content">
+    <!--로고-->
+    <div class="logo">
+      <a href="index.html"><img src="./images/small_logo.png"></a>
+      <a href="index.html"><h1>wavestudio</h1></a><br/>
+      <a href="index.html"><h5>music practiceroom</h5></a>
+    </div>
+    <!--상단 로그인 회원가입-->
+  <div class="top_nav">
+    <a href="login.html" targer="blank">로그인</a>
+    <a href="join.html" targer="blank">회원가입</a>
+  </div>
+  <!--메인메뉴-->
+  <div class="main_menu">
+    <ul>
+      <li><a href="intro.html">음악연습실</a></li>
+      <li><a href="info.html">이용안내</a></li>
+      <li><a href="room.html">연습실</a></li>
+      <li><a href="reservation.html">예약하기</a></li>
+      <li><a href="notice.html">공지사항</a></li>
+      <li><a href="location.html">오시는길</a></li>
+    </ul>
+  </div>
+  </div>
+
+  <!-- 메인 이미지 -->
+  <section class="container">  <!-- 글자 -->
+    <input type="radio" class="main_input1" name="mainradio" id="select1" checked>
+    <label for="select1" class="label_btn1">PREV</label>
+    <input type="radio" class="main_input2" name="mainradio" id="select2">
+    <label for="select2" class="label_btn2">NEXT</label>
+
+    <ul class="main_image"> <!-- 메인이미지 -->
+        <li><img src="./images/main2.jpg" alt=""></li>
+        <li><img src="./images/main3.jpg" alt=""></li>
+    </ul>
+</section>    
+ 
+<!-- 연습실 둘러보기 연습실이미지-->
+  <div class="room">
+    <h1>연습실 둘러보기</h1>
+    <div class="room_image">
+      <a href="room.html"><img src="./images/iloveimg-resized/room_5_2.jpg"></a>
+      <a href="room.html"><img src="./images/iloveimg-resized/room_5.jpg"></a>
+      <a href="room.html"><img src="./images/iloveimg-resized/room_2_2.jpg"></a>
+    </div>
+  </div>
+
+<!-- 공지사항 오시는길 -->
+  <div class="section">
+    <div class="notice">
+      <div class="notice_top">
+      <h2>공지사항</h2>
+      
+      <a href="notice.html">+더보기</a> 
+     
+    </div>
+      <ul>
+        <li><a href="#">22년 11월 대여안내</a></li>
+        <li><a href="#">11월 할인 이벤트</a></li>
+        <li><a href="#">한달 시간제 할인</a></li>
+        <li><a href="#">월 대여안내</a></li>
+        <li><a href="#">4번방 계약완료 안내</a></li>
+        <li><a href="#">10월 할인이벤트</a></li>
+      </ul>
+    </div>
+    <div class="location">
+      <h2>오시는 길</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.724561214242!2d127.0609042318917!3d37.537989668930415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca4ec4037cc2f%3A0x444fa003e05d76d6!2z7ISc7Jq47Yq567OE7IucIOq0keynhOq1rCDrmp3shKzroZwyM-qwgOq4uCAxNw!5e0!3m2!1sko!2skr!4v1667371979881!5m2!1sko!2skr" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <!--footer 부분-->
+  <footer>  
+    <div class="footer_text">  
+    <p>WAVESTUDIO |  
+    서울 광진구 뚝섬로23가길 17 지하1층 | 
+    이메일 : aaa@naver.com<br/>
+    사업자등록번호 : 000-00-0000 | 
+    TEL : 010-0000-0000 | 
+    대표자 : ㄱㄱㄱ<br/>
+    Copyright&copy;jk.All Rights Reserved</p>
+  </div> 
+  </footer>
+</body>
+</html>

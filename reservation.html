@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>예약하기</title>
+  <link href="./css/basic.css" rel="stylesheet"/>
+  <style>
+    /*상단 라인*/
+    .top_line{
+      width: 1200px;
+      height: 25px;
+      background-color: #ffd863;      
+    }
+    /*상단 부분*/
+    .top_content{
+      width: 1200px;
+      height: 100px;
+      position: relative;
+    }
+    /* 로고 타이틀*/
+    .logo{
+      width: 400px;
+      height: 100px;
+      left: 140px;
+      top: 10px;
+      position: absolute;
+       /*background-color: aliceblue;  지울부분 */
+    }
+    /*.logo>a{
+      display: inline-block;     
+    }*/
+    /*로고사진*/
+    .logo img{
+      float: left;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      margin-right: 10px;
+    }
+    /*타이틀*/
+    .logo h1{
+      display: inline-block;
+      width: 210px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 2.4rem;
+      color: #ffd863;  
+    }
+    /* practice room */
+    .logo h5{
+      display: inline-block;
+      width: 170px;
+      height: 10px;
+      line-height: 10px;
+      margin-left: 35px;
+      font-size: 1.1rem;
+      color: #7081cc;
+    }
+    /* 로그인 회원가입*/
+    .top_nav{
+      top: 10px;
+      right: 60px;
+      position: absolute;
+    }
+    .top_nav>a{
+      display: inline-block;
+      padding: 0px 5px;
+      font-weight: 500;
+    }
+    .top_nav a:hover{
+      color:  #7081cc;
+      background-color: #ffd863;
+      border-radius: 3px;
+    }
+
+    /*메인메뉴*/
+    .main_menu{
+      left: 450px; /* 수정할 부분*/
+      bottom: 10px;
+      position: absolute;
+      width: 600px;
+      text-align: center;
+      /*background-color: antiquewhite; 지울부분*/
+    }
+    .main_menu li{
+      display: inline-block;
+    }
+    .main_menu li>a{
+      display: inline-block;
+      padding: 10px;
+    }
+    .main_menu li>a:hover{
+      color: #7081cc;
+    }
+
+     /* 예약 */
+     .re_text{
+      height: 120px;
+      background-color: #fce08d;
+    }
+    .re_text>h1{
+      padding-top: 35px;
+      text-align: center;
+    }
+
+     /*reservation*/
+     .re1_text{
+      width: 200px;
+      text-align: center;
+      font-weight: 500px;
+      font-size: 1rem;
+      margin: 30px 500px;
+      padding-bottom: 10px;
+    }
+
+    /*예약 테이블*/
+  .re_form>h1{
+    margin: 50px 0px;
+    text-align: center;
+  }
+  
+  .re_form{
+    width: 1200px;
+    height: 700px;
+  }
+ 
+  table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-bottom: none;
+    margin-left: 350px;
+    width: 500px;
+
+  }
+  tr{
+    height: 50px;
+    line-height: 50px;
+  }
+  td{
+    border: 0.8px solid rgb(194, 191, 191);
+    
+  }
+
+  .title{
+    width: 230px;
+    background-color: #ffefbf;
+    text-align: center;
+  }
+  .content{
+    width: 450px;
+    padding-left: 10px; /* 수정할 부분*/
+  }
+  .input_text{
+    width: 250px;
+    height: 30px; 
+    margin-bottom: 4px;
+  }
+  .p1{
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 4px;
+  }
+  .p2{
+    width: 70px;
+    height: 27px;
+    line-height: 27px;
+    margin-bottom: 4px;
+  }
+  .r{
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 4px;
+  }
+  .d{
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 4px;
+  }
+  .t{
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 4px;
+  }
+  
+  .submit{
+    text-align: right;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+  #submit{   
+    width: 70px;
+    margin-top: 15px;
+    margin-right: 20px;
+    height: 30px;
+    background-color: #fce08d;
+    border-radius: 5px;
+    border: 0.8px solid rgb(233, 204, 165);
+    cursor: pointer;
+    
+  }
+
+  /*주의사항*/
+    .cau{
+     margin: 20px 280px;
+    }
+   
+    .cau_text{
+      width: 690px;
+      height: 300px;
+      border: 3px solid #6d82e4;
+      border-style: double;
+      margin-left: 240px;
+      margin-bottom: 50px;
+    }
+    .cau_text li{
+      list-style: inside;
+      font-size: 1rem;
+      font-weight: 700; 
+      padding: 25px 20px;
+      letter-spacing: 1px;
+    }
+
+     /*footer*/
+     footer{
+      width: 1200px;
+      height: 100px;
+      background-color: #7081cc;
+    }
+    .footer_text{
+      color: white;
+      text-align: center;
+      padding-top: 25px ;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    
+  </style>
+
+</head>
+<body>
+  <!--상단  라인-->
+  <div class="top_line">
+  </div>
+  <!--상단 부분-->
+  <div class="top_content">
+    <!--로고-->
+    <div class="logo">
+      <a href="index.html"><img src="./images/small_logo.png"></a>
+      <a href="index.html"><h1>wavestudio</h1></a><br/>
+      <a href="index.html"><h5>music practiceroom</h5></a>
+    </div>
+    <!--상단 로그인 회원가입-->
+  <div class="top_nav">
+    <a href="login.html" targer="blank">로그인</a>
+    <a href="join.html" targer="blank">회원가입</a>
+  </div>
+  <!--메인메뉴-->
+  <div class="main_menu">
+    <ul>
+      <li><a href="intro.html">음악연습실</a></li>
+      <li><a href="info.html">이용안내</a></li>
+      <li><a href="room.html">연습실</a></li>
+      <li><a href="reservation.html">예약하기</a></li>
+      <li><a href="notice.html">공지사항</a></li>
+      <li><a href="location.html">오시는길</a></li>
+    </ul>
+  </div>
+  </div>
+
+  <!-- 예약메뉴-->
+  <div class="re_text">
+  <h1>예약하기</h1>
+  </div>  
+
+  <!--예약-->
+  <div class="re1_text">
+    <h1>Reservation</h1>
+  </div>
+
+<!-- 예약 테이블-->
+<form action="" method="post" name="member" id="member"></form>
+  <table >
+    <tr>
+      <td class="title"><label for="name">이 름</label></td>
+      <td class="content"><input type="text" name="name" id="name" class="input_text" required placeholder="이름을 입력하세요"></td>
+    </tr>  
+    <tr>
+      <td class="title"><label for="phone">전화번호</label></td>
+      <td class="content">
+        <select class="p1">
+          <option>010</option>
+          <option>011</option>
+          <option>017</option>
+          <option>018</option>
+          <option>019</option>
+          <option>070</option>
+        </select>
+        - <input type="text" name="phone2" id="phone2" class="p2">
+        - <input type="text" name="phone3" id="phone3" class="p2">
+      </td>
+    </tr>
+    <tr>
+      <td class="title"><label for="room">예약룸</label></td>
+      <td class="content">
+        <select class="r">
+          <option>room1</option>
+          <option>room2</option>
+          <option>room3</option>
+          <option>room4</option>
+          <option>room5</option>
+        </select>
+    </tr> 
+    <tr>
+      <td class="title"><label for="date">예약날짜</label></td>
+      <td class="content">
+        <select class="d">
+          <option>2022-11-03</option>
+          <option>2022-11-04</option>
+          <option>2022-11-05</option>
+          <option>2022-11-06</option>
+          <option>2022-11-07</option>
+          <option>2022-11-08</option>
+          <option>2022-11-09</option>
+          <option>2022-11-10</option>
+          <option>2022-11-11</option>
+          <option>2022-11-12</option>
+          <option>2022-11-12</option>
+          <option>2022-11-13</option>
+          <option>2022-11-14</option>
+          <option>2022-11-15</option>
+          <option>2022-11-15</option>  
+        </select>
+    </tr> 
+    <tr>
+      <td class="title"><label for="time">예약시간</label></td>
+      <td class="content">
+        <select class="t">
+          <option>00</option>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+          <option>08</option>
+          <option>09</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+          <option>13</option>
+          <option>14</option>
+          <option>15</option>
+          <option>16</option>
+          <option>17</option>
+          <option>18</option>
+          <option>19</option>
+          <option>10</option>
+          <option>21</option>
+          <option>22</option>
+          <option>23</option>
+          
+        </select>
+        ~
+        <select class="t">
+          <option>00</option>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+          <option>08</option>
+          <option>09</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+          <option>13</option>
+          <option>14</option>
+          <option>15</option>
+          <option>16</option>
+          <option>17</option>
+          <option>18</option>
+          <option>19</option>
+          <option>10</option>
+          <option>21</option>
+          <option>22</option>
+          <option>23</option>
+        </select>
+    </tr> 
+    <tr>
+      <td class="submit" colspan="2">
+        <input type="submit" name="submit" id="submit" value="예약하기"></td>
+    
+    </tr>
+    </table>
+  </div>
+  <!--주의사항-->
+  <div class="cau">
+    <h2>주의사항</h2>
+  </div>
+
+  <div class="cau_text">
+    <ul>
+      <li>드럼,관악기는 대여 불가</li>
+      <li>전용대여, 월단위, 장기이용 대여문의</li>
+      <li>쿠폰제, 월단위는 연락주세요</li>
+      <li>문의사항은 000-0000-0000으로 연락주세요</li>
+    </ul>
+  </div>
+
+
+  <!--footer 부분-->
+  <footer>  
+    <div class="footer_text">  
+    <p>WAVESTUDIO |  
+    서울 광진구 뚝섬로23가길 17 지하1층 | 
+    이메일 : aaa@naver.com<br/>
+    사업자등록번호 : 000-00-0000 | 
+    TEL : 010-0000-0000 | 
+    대표자 : ㄱㄱㄱ<br/>
+    Copyright&copy;jk.All Rights Reserved</p>
+  </div> 
+  </footer>
+</body>
+</html>

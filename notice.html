@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>공지사항</title>
+  <link href="./css/basic.css" rel="stylesheet"/>
+  <style>
+    /*상단 라인*/
+    .top_line{
+      width: 1200px;
+      height: 25px;
+      background-color: #ffd863;      
+    }
+    /*상단 부분*/
+    .top_content{
+      width: 1200px;
+      height: 100px;
+      position: relative;
+    }
+    /* 로고 타이틀*/
+    .logo{
+      width: 400px;
+      height: 100px;
+      left: 140px;
+      top: 10px;
+      position: absolute;
+       /*background-color: aliceblue;  지울부분 */
+    }
+    /*.logo>a{
+      display: inline-block;     
+    }*/
+    /*로고사진*/
+    .logo img{
+      float: left;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      margin-right: 10px;
+    }
+    /*타이틀*/
+    .logo h1{
+      display: inline-block;
+      width: 210px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 2.4rem;
+      color: #ffd863;  
+    }
+    /* practice room */
+    .logo h5{
+      display: inline-block;
+      width: 170px;
+      height: 10px;
+      line-height: 10px;
+      margin-left: 35px;
+      font-size: 1.1rem;
+      color: #7081cc;
+    }
+    /* 로그인 회원가입*/
+    .top_nav{
+      top: 10px;
+      right: 60px;
+      position: absolute;
+    }
+    .top_nav>a{
+      display: inline-block;
+      padding: 0px 5px;
+      font-weight: 500;
+    }
+    .top_nav a:hover{
+      color:  #7081cc;
+      background-color: #ffd863;
+      border-radius: 3px;
+    }
+
+    /*메인메뉴*/
+    .main_menu{
+      left: 450px; /* 수정할 부분*/
+      bottom: 10px;
+      position: absolute;
+      width: 600px;
+      text-align: center;
+      /*background-color: antiquewhite; 지울부분*/
+    }
+    .main_menu li{
+      display: inline-block;
+    }
+    .main_menu li>a{
+      display: inline-block;
+      padding: 10px;
+    }
+    .main_menu li>a:hover{
+      color: #7081cc;
+    }
+
+     /* 공지사항 메뉴*/
+     .no_text{
+      height: 120px;
+      background-color: #fce08d;
+    }
+    .info_text>h1{
+      padding-top: 40px;
+      text-align: center;
+    }
+
+    /*공지사항*/
+    .no_text{
+      height: 120px;
+      background-color: #fce08d;
+    }
+    .no_text>h1{
+      padding-top: 30px;
+      text-align: center;
+    }
+
+    .notice_text{
+      width: 500px;
+      margin: 30px 100px;
+    }
+
+    /*공지사항 테이블*/
+    table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 1100px;
+    margin: auto;
+    margin-bottom: 70px;
+    }
+  
+    tr{
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    }
+    th{
+    width: 70px;
+    height: 10px;
+    line-height: 10px; 
+    background-color: #fdf7e5;
+    padding: 10px;
+    font-size: 1.2rem;
+     }
+    .no{
+      width: 10px;
+    }
+    .title{
+      width: 500px;
+      text-align: left;
+      padding-left: 10px;
+    }
+
+
+    /*footer*/
+    footer{
+      width: 1200px;
+      height: 100px;
+      background-color: #7081cc;
+    }
+    .footer_text{
+      color: white;
+      text-align: center;
+      padding-top: 25px ;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    
+  </style>
+
+</head>
+<body>
+  <!--상단  라인-->
+  <div class="top_line">
+  </div>
+  <!--상단 부분-->
+  <div class="top_content">
+    <!--로고-->
+    <div class="logo">
+      <a href="index.html"><img src="./images/small_logo.png"></a>
+      <a href="index.html"><h1>wavestudio</h1></a><br/>
+      <a href="index.html"><h5>music practiceroom</h5></a>
+    </div>
+    <!--상단 로그인 회원가입-->
+  <div class="top_nav">
+    <a href="login.html" targer="blank">로그인</a>
+    <a href="join.html" targer="blank">회원가입</a>
+  </div>
+  <!--메인메뉴-->
+  <div class="main_menu">
+    <ul>
+      <li><a href="intro.html">음악연습실</a></li>
+      <li><a href="info.html">이용안내</a></li>
+      <li><a href="room.html">연습실</a></li>
+      <li><a href="reservation.html">예약하기</a></li>
+      <li><a href="notice.html">공지사항</a></li>
+      <li><a href="location.html">오시는길</a></li>
+    </ul>
+  </div>
+  </div>
+
+  <!-- 공지사항-->
+  <div class="no_text">
+  <h1>공지사항</h1>
+  </div>  
+
+  <!--notice-->
+  <div class="notice_text">
+    <h1>NOTICE</h1>
+  </div>
+
+
+  <!-- 공지사항 테이블-->
+
+  <div class="notice">
+    <table border="1">
+      <tr>
+        <th class="no">No.</th>
+        <th>Title</th>
+        <th class="writer">Writer</th>
+        <th class="date">Date</th>
+      </tr>
+      <tr>
+        <td class="no">1</td>
+        <td class="title"><a href="#">WAVESTUDIO 10월 신규 오픈</a></td>
+        <td class="writer"><a href="#">김땡떙</a></td>
+        <td class="date">22-10-25</a></td>         
+      </tr>
+      <tr>
+        <td class="no">2</td>
+        <td class="title"><a href="#">11월 할인 이벤트</a></td>
+        <td class="writer"><a href="#">김땡떙</a></td>
+        <td class="date">22-11-01</a></td>         
+      </tr>
+      <tr>
+        <td class="no">3</td>
+        <td class="title"><a href="#">한달 시간제 할인</a></td>
+        <td class="writer"><a href="#">김땡떙</a></td>
+        <td class="date">22-10-29</a></td>         
+      </tr>
+      <tr>
+        <td class="no">4</td>
+        <td class="title"><a href="#">월대여안내</a></td>
+        <td class="writer"><a href="#">김땡떙</a></td>
+        <td class="date">22-10-28</a></td>         
+      </tr>
+      <tr>
+        <td class="no">5</td>
+        <td class="title"><a href="#">4번방계약완료안내</a></td>
+        <td class="writer"><a href="#">김땡떙</a></td>
+        <td class="date">22-10-27</a></td>         
+      </tr>
+      <tr>
+        <td class="no">6</td>
+        <td class="title"><a href="#">10월할인 이벤트</a></td>
+        <td class="writer"><a href="#">김땡떙</a></td>
+        <td class="date">22-10-26</a></td>         
+      </tr>
+      <tr>
+        <td class="no"></td>
+        <td class="title"></td>
+        <td class="writer"></td>
+        <td class="date"></td>
+      </tr>
+      <tr>
+        <td class="no"></td>
+        <td class="title"></td>
+        <td class="writer"></td>
+        <td class="date"></td>
+      </tr>
+      <tr>
+        <td class="no"></td>
+        <td class="title"></td>
+        <td class="writer"></td>
+        <td class="date"></td>
+      </tr>
+      
+    </table>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!--footer 부분-->
+  <footer>  
+    <div class="footer_text">  
+    <p>WAVESTUDIO |  
+    서울 광진구 뚝섬로23가길 17 지하1층 | 
+    이메일 : aaa@naver.com<br/>
+    사업자등록번호 : 000-00-0000 | 
+    TEL : 010-0000-0000 | 
+    대표자 : ㄱㄱㄱ<br/>
+    Copyright&copy;jk.All Rights Reserved</p>
+  </div> 
+  </footer>
+</body>
+</html>
